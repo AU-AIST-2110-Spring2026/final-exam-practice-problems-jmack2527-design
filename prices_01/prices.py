@@ -14,12 +14,18 @@ def filter_prices(prices: list[float]) -> list[float]:
     # Prices should be greater than or equal to 5.00
     # Prices should be less than or equal to 25.00
     # Prices should be whole-dollar amounts, such as 8.00 or 10.00
+    for price in prices:
+        if price >= 5.00 and price <= 25.00 and price % 1 == 0:
+            filtered_prices.append(price)
+
 
     # Step 2: Sort prices from lowest to highest
     # Use the sort function
+    filtered_prices.sort()
 
     # Step 3: Return the filtered and sorted list
     # return filtered_prices
+    return filtered_prices
 
 def main():
     '''DO NOT MODIFY THIS FUNCTION'''
